@@ -1,0 +1,29 @@
+.margintop15{
+    margin-top: 15%;
+}
+.main{
+    background-color: aqua;
+}
+.row{
+    margin: 0 !important;
+}
+.h55px{
+    height: 55px !important;
+}
+.w-80px{
+    width: 80px;
+}
+.outlinenone{
+    outline: none;
+}
+li{
+    display: inline-block;
+    margin-left: 2%;
+    font-weight: 500;
+}
+li input{
+    margin-right: 5px;
+}
+.result li{
+    display: block;
+}

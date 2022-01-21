@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>ATM PROJECT</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-6 col-10 main offset-1 offset-md-3 border p-2 margintop15">
+            <div class="row" id="amountscreen1">
+                <h2 class="col-md-6 offset-md-3 ">ATM MACHINE</h2>
+            </div>
+            <form class="row g-3" id="amountscreen2">
+                <div class="col-3">
+                    <label for="staticEmail2" class="visually-hidden">Email</label>
+                    <input type="text" readonly class="form-control-plaintext outlinenone" id="staticEmail2"
+                        value="Amount :">
+                </div>
+                <div class="col-6">
+                    <label for="amount" class="visually-hidden">Amount</label>
+                    <input type="number" class="form-control" id="amount" min="100" max="100000" placeholder="Amount">
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary mb-3" onclick="next()">Next</button>
+                </div>
+            </form>
+            <div class="row" id="choosescreen" style="display: none;">
+                <h2 class="col-12 text-center mb-5">Please choose Notes</h2>
+                <div class="col-12 row">
+                    <ul>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" value="500">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Rs: 500
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" value="100">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Rs: 100
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault3" value="50">
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                    Rs: 50
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault4" value="20">
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                    Rs: 20
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault5" value="10">
+                                <label class="form-check-label" for="flexRadioDefault5">
+                                    Rs: 10
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 row">
+                    <button class="btn btn-primary mb-3 col-md-3 offset-md-9" onClick="func()">Withdraw</button>
+                </div>
+            </div>
+            <div class="row" id="resultsscreen" style="display: none;">
+                <h2 class="col-12 text-center mb-5">Currency Notes Out in Below Sequence</h2>
+                <div class="col-12 row">
+                    <ul class="result col-4">
+                        <li class="row"><label class="col-6">Rs=500</label> :<span class="col-6" id="r500"></span></li>
+                        <li class="row"><label class="col-6">Rs=100</label> :<span class="col-6" id="r100"></span></li>
+                        <li class="row"><label class="col-6">Rs=50</label> : <span class="col-6" id="r50"></span></li>
+                        <li class="row"><label class="col-6">Rs=20</label> : <span class="col-6" id="r20"></span></li>
+                        <li class="row"><label class="col-6">Rs=10</label> : <span class="col-6" id="r10"></span></li>
+                        <li class="row"><label class="col-6">Rs=5</label> :  <span class="col-6" id="r5"></span></li>
+                        <li class="row"><label class="col-6">Rs=1</label> :  <span class="col-6" id="r1"></span></li>
+                    </ul>
+                </div>
+                <div class="col-12 row">
+                    <button class="btn btn-primary mb-3 col-md-3 offset-md-9" onClick="neu()">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
